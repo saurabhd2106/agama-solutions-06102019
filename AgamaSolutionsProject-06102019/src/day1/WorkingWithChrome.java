@@ -1,5 +1,6 @@
 package day1;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WorkingWithChrome {
@@ -13,7 +14,11 @@ public class WorkingWithChrome {
 
 		driver = new ChromeDriver();
 
-		driver.manage().window().maximize();
+		Dimension dim = new Dimension(500, 500);
+		
+		driver.manage().window().setSize(dim);
+		
+		//driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();
 
